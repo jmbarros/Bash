@@ -1,0 +1,25 @@
+  199  iptables -t nat -vL
+  200  iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 446 -j DNAT  --to-destination 172.16.250.163:22
+  201  iptables -t nat -A POSTROUTING -d 172.16.250.163 -s 172.16.250.0/24 -p tcp --dport 22 q-j SNAT --to 172.16.250.178:446
+  202  iptables -t nat -A POSTROUTING -d 172.16.250.163 -s 172.16.250.0/24 -p tcp --dport 22 -j SNAT --to 172.16.250.178:446
+  203  cd
+  204  ls
+  205  rm -rf *
+  206  ls
+  207  mkdir ssh_switch
+  208  cd ssh_switch/
+  209  ls
+  210  vi ssh_switch.conf
+  211  history
+  212  &201
+  213  man hitoryu
+  214  man history
+  215  !
+  216  ls
+  217  history 
+  218  history | tail 
+  219  history | tail -10
+  220  history | tail -20
+  221  history | tail -20 > command
+  222  history | tail -22 > command
+  223  history | tail -25 > command
